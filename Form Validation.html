@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label for="username">Nama Pelanggan:</label>
+    <input required maxlength="30" type="text" id="username" placeholder="masukkan username">
+    <br />
+    <label for="email">Email:</label>
+    <input required type="email" id="email" placeholder="masukkan email">
+    <br />
+    <label for="jam">Jam Keberangkatan:</label>
+    <input required type="time" id="jam">
+    <br />
+    <label for="tujuan">Tujuan Keberangkatan:</label>
+    <input required type="text" id="tujuan" placeholder="kota tujuan">
+    <br />
+    <label for="tiket">Jumlah Tiket:</label>
+    <input required type="number" id="tiket" min="1" max="10">
+    <br />
+    <button onclick="validationForm()">Submit</button>
+
+    <script>
+        function validationForm() {
+            const username = document.getElementById('username');
+            const email = document.getElementById('email');
+            const jam = document.getElementById('jam');
+            const tujuan = document.getElementById('tujuan');
+            const tiket = document.getElementById('tiket');
+
+            if (username.value == '') {
+                alert('data tidak boleh kosong');
+            } else if(email.value == '') {
+                alert('data tidak boleh kosong');
+            } else if(jam.value == '') {
+                alert('data tidak boleh kosong');
+            } else if(tujuan.value == '') {
+                alert('data tidak boleh kosong');
+            } else if(tiket.value == '') {
+                alert('data tidak boleh kosong');
+            } else {
+                alert('data valid');
+            }
+
+            document.getElementById('hasil').innerHTML = 'nama :' + 'username' + '<br /> email:' + email + 'br /> time:' + time + '<br /> tujuan:' + tujuan + '<br /> tiket:' + tiket;
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>
